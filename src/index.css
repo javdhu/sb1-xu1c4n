@@ -1,0 +1,54 @@
+@import '@mantine/core/styles.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-flow__node {
+  @apply select-none;
+}
+
+.react-flow__handle {
+  @apply w-3 h-3;
+}
+
+.react-flow__handle {
+  background-color: #228be6;
+  border: 2px solid white;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2px;
+}
+
+.react-flow__edge.animated path {
+  stroke-dasharray: 5;
+  animation: dashdraw 0.5s linear infinite;
+}
+
+@keyframes dashdraw {
+  from {
+    stroke-dashoffset: 10;
+  }
+}
+
+.react-flow__controls {
+  @apply bg-white/90 dark:bg-gray-800/90 shadow-lg border-none;
+}
+
+.react-flow__controls-button {
+  @apply border-none hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
+[data-mantine-color-scheme='dark'] .react-flow__background {
+  background-color: #141517;
+}
+
+[data-mantine-color-scheme='dark'] .react-flow__edge-path {
+  stroke: #495057;
+}
+
+[data-mantine-color-scheme='dark'] .react-flow__controls-button {
+  @apply text-gray-300;
+  border: none;
+}
